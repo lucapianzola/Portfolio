@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luca Pianzola | Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans leading-relaxed">
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-gray-900 bg-opacity-75 backdrop-blur-md z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="#hero" class="text-2xl font-bold">Luca Pianzola</a>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="hover:text-teal-400 transition">Sobre mí</a></li>
+        <li><a href="#experience" class="hover:text-teal-400 transition">Experiencia</a></li>
+        <li><a href="#skills" class="hover:text-teal-400 transition">Habilidades</a></li>
+        <li><a href="#contact" class="hover:text-teal-400 transition">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="h-screen flex flex-col justify-center items-center text-center px-4" style="padding-top: 4rem;">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Hola, soy <span class="text-teal-400">Luca Pianzola</span></h1>
+    <p class="text-xl md:text-2xl mb-8">Creador de soluciones de software &amp; RPA Developer en MO&amp;PC Collections</p>
+    <a href="#contact" class="px-6 py-3 border border-teal-400 rounded-full hover:bg-teal-400 hover:text-gray-900 transition">Contáctame</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-6 text-center">Sobre mí</h2>
+    <div class="max-w-3xl mx-auto text-lg">
+      <p>Soy estudiante de Ingeniería de Sistemas en mi cuarto año, apasionado por la automatización y el desarrollo de software. Actualmente desempeño el rol de RPA Developer en MO&amp;PC Argentina Business Solutions, donde diseño y mantengo soluciones informáticas para clientes del sector bancario y financiero.</p>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="bg-gray-800 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-8 text-center">Experiencia</h2>
+      <div class="space-y-8 max-w-4xl mx-auto">
+        <div class="bg-gray-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+          <h3 class="text-2xl font-semibold">RPA Developer | MO&amp;PC Argentina Business Solutions</h3>
+          <span class="text-sm text-gray-400">Febrero 2024 - Presente</span>
+          <p class="mt-2">Diseño, organización, desarrollo y mantenimiento de proyectos RPA para grandes empresas bancarias y financieras. Soy responsable del correcto funcionamiento de una gran parte de los proyectos, integrando APIs, scraping de datos y optimización de procesos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container mx-auto py-16 px-4">
+    <h2 class="text-4xl font-bold mb-8 text-center">Habilidades</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+      <div class="p-4 bg-gray-700 rounded-xl text-center hover:bg-gray-600 transition">
+        <h4 class="font-semibold">Java & C++</h4>
+      </div>
+      <div class="p-4 bg-gray-700 rounded-xl text-center hover:bg-gray-600 transition">
+        <h4 class="font-semibold">VB.NET & Python</h4>
+      </div>
+      <div class="p-4 bg-gray-700 rounded-xl text-center hover:bg-gray-600 transition">
+        <h4 class="font-semibold">SQL Server & PostgreSQL</h4>
+      </div>
+      <div class="p-4 bg-gray-700 rounded-xl text-center hover:bg-gray-600 transition">
+        <h4 class="font-semibold">HTML, CSS & JS</h4>
+      </div>
+      <div class="p-4 bg-gray-700 rounded-xl text-center hover:bg-gray-600 transition">
+        <h4 class="font-semibold">UiPath & RPA</h4>
+      </div>
+      <div class="p-4 bg-gray-700 rounded-xl text-center hover:bg-gray-600 transition">
+        <h4 class="font-semibold">Agile & Tools (JIRA, Confluence)</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-800 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Contacto</h2>
+      <p class="mb-4">Conectemos y hablemos de cómo puedo ayudarte a impulsar tus proyectos.</p>
+      <div class="flex justify-center space-x-6">
+        <a href="https://www.linkedin.com/in/lucapianzola/" target="_blank" class="hover:text-teal-400 transition">LinkedIn</a>
+        <a href="mailto:lucapianzola0@gmail.com" class="hover:text-teal-400 transition">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-6 text-center text-gray-500">
+    © 2025 Luca Pianzola. Todos los derechos reservados.
+  </footer>
+
+  <!-- GSAP Animations -->
+  <script>
+    window.addEventListener('load', () => {
+      gsap.from('#hero h1', { y: -50, opacity: 0, duration: 1 });
+      gsap.from('#hero p', { y: 50, opacity: 0, duration: 1, delay: 0.5 });
+      gsap.from('#hero a', { scale: 0, opacity: 0, duration: 0.8, delay: 1 });
+      document.querySelectorAll('section').forEach((section, i) => {
+        if (section.id !== 'hero') {
+          gsap.from(section, { y: 30, opacity: 0, duration: 1, delay: i * 0.3 + 0.5, scrollTrigger: {
+            trigger: section,
+            start: 'top 80%'
+          }});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
