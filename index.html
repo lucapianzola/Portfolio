@@ -206,6 +206,11 @@
     };
     initParticles(); drawParticles();
     window.addEventListener('resize', initParticles);
+
+    // Forzar actualización de ScrollTrigger después de animaciones iniciales
+    window.addEventListener('load', () => {
+      ScrollTrigger.refresh();
+    });
   </script>
 </body>
 </html>
